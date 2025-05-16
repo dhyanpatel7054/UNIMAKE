@@ -20,10 +20,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import ProductSection from '../../ProductSection/productSection';
 // Update image paths to Cloudinary URLs
 const sliderImages = [
-  '../../../public/slider-5.jpg',
-  '../../../public/slider-6.jpg',
-  '../../../public/slider-9.jpg',
-  './../../public/slider-11.jpg'
+  '/slider-5.jpg',
+  '/slider-6.jpg',
+  '/slider-9.jpg',
+  '/slider-11.jpg'
 ];
 
 // ... sliderSettings remains the same
