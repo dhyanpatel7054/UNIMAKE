@@ -13,7 +13,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-     axios.get("https://www.unimakevisionandtechnology.com/api/products")
+     axios.get("https://api.unimakevisionandtechnology.com/api/products")
       .then(response => setProducts(response.data))
       .catch(error => console.error("Error:", error));
   }, []);
