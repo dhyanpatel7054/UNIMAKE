@@ -20,10 +20,10 @@ import 'slick-carousel/slick/slick-theme.css';
 import ProductSection from '../../ProductSection/productSection';
 // Update image paths to Cloudinary URLs
 const sliderImages = [
-  '/slider-5.jpg',
-  '/slider-6.jpg',
-  '/slider-9.jpg',
-  '/slider-11.jpg'
+  '../../../public/slider-5.jpg',
+  '../../../public/slider-6.jpg',
+  '../../../public/slider-9.jpg',
+  './../../public/slider-11.jpg'
 ];
 
 // ... sliderSettings remains the same
@@ -74,13 +74,13 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('https://unimake-rajs-projects-ed5d8702.vercel.app/api/products');
+        const response = await fetch('/api/products');
         if (!response.ok) throw new Error('Failed to fetch products');
         const data = await response.json();
         // Map Cloudinary URLs to products
         const productsWithCloudinary = data.map(product => ({
           ...product,
-          image: image: `https://res.cloudinary.com/unimake/image/upload/${product.imagePath}`
+          image: `https://res.cloudinary.com/your-account/image/upload/${product.imagePath}`
         }));
         setProducts(productsWithCloudinary);
       } catch (err) {
@@ -115,7 +115,7 @@ const Home = () => {
                 <div className="lg:w-[45%] xl:w-[500px] shrink-0 relative group">
                   <div className="absolute inset-0 bg-pink-100 rounded-2xl transform rotate-2 scale-95 group-hover:rotate-1 transition-all duration-300"></div>
                   <img 
-                    src="/my_image.jpg" 
+                    src="src/assets/my_image.jpg" 
                     alt="Unimake Ice Cream Production" 
                     className="w-full h-auto rounded-2xl shadow-2xl relative transform transition-all duration-300 hover:scale-95"
                   />
