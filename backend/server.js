@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://unimake06:YBhKFEOkfC4oXv6t@cluster0.q9htute.mong
 
 // Middleware
 app.use(cors({
-  origin: 'https://unimake-r83c-git-main-rajs-projects-ed5d8702.vercel.app',
+  origin: 'https://www.unimakevisionandtechnology.com',
   methods: ['GET', 'POST', 'OPTIONS'],
   allowedHeaders: ['Content-Type']
 }));
