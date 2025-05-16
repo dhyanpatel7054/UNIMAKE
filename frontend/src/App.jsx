@@ -13,7 +13,7 @@ function App() {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    axios.get("https://unimake-rajs-projects-ed5d8702.vercel.app/api/products")
+     axios.get("https://www.unimakevisionandtechnology.com/api/products")
       .then(response => setProducts(response.data))
       .catch(error => console.error("Error:", error));
   }, []);
