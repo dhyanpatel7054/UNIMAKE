@@ -9,8 +9,8 @@ import {
   FaFacebook,
   FaYoutube
 } from 'react-icons/fa';
-import logo from "../../../src/assets/logo2.jpg";
-import indiamart from "../../../src/assets/indiamart.jpg"
+import logo from "../../../public/logo2.jpg";
+import indiamart from "../../../public/indiamart.jpg"
 
 const Footer = () => {
   const phoneNumbers = [
