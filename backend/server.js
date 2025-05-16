@@ -3,7 +3,7 @@ const app = express();
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-// Connect to MongoDB with error handling
+// Connect to MongoDB
 mongoose.connect('mongodb+srv://unimake06:YBhKFEOkfC4oXv6t@cluster0.q9htute.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => console.log('✅ MongoDB Connected'))
   .catch(err => console.error('❌ MongoDB Connection Error:', err));
@@ -15,11 +15,15 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+
 // Routes
 const routes = require('./routes/routes');
 app.use('/api', routes);
 
-// Start server
-app.listen(3000, () => {
-  console.log("Server running on port 3000");
+// Add root route handler
+app.get('/', (req, res) => {
+  res.send('Welcome to UNIMAKE API');
 });
+
+// Export the Express app for Vercel
+module.exports = app;
