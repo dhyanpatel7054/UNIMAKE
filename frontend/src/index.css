@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Smooth dropdown visibility */
+.group-hover\:fade-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Improved submenu transitions */
+.submenu-transition {
+  transition: opacity 200ms ease, transform 200ms ease;
+  opacity: 0;
+  transform: translateX(-10px);
+}
+
+/* Ensure submenu opens correctly on hover */
+.group:hover .submenu-transition {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* Hide scrollbar while keeping scrolling functional */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+dropdown-container {
+  touch-action: none; /* Disable touch scroll on container */
+}
+
+.dropdown-content {
+  touch-action: pan-y; /* Enable vertical scroll only on content */
+  overscroll-behavior: contain; /* Prevent scroll chaining */
+}
+.overscroll-contain {
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-pop-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
