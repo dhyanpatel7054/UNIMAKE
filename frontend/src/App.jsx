@@ -12,11 +12,11 @@ import ScrollToTop from './components/scroleToTop/scrollToTop';
 function App() {
   const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    axios.get("https://unimake-rajs-projects-ed5d8702.vercel.app/api/products")
-      .then(response => setProducts(response.data))
-      .catch(error => console.error("Error:", error));
-  }, []);
+  app.use(cors({
+  origin: 'https://unimake-r83c-git-main-rajs-projects-ed5d8702.vercel.app',
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}));
 
   return (
     <Router>
