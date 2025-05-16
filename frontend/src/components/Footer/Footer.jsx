@@ -10,6 +10,7 @@ import {
   FaYoutube
 } from 'react-icons/fa';
 import logo from "../../../src/assets/logo2.jpg";
+import indiamart from "../../../src/assets/indiamart.jpg"
 
 const Footer = () => {
   const phoneNumbers = [
@@ -17,6 +18,23 @@ const Footer = () => {
     { name: "HARPALSINH CHAUHAN", number: "+91 8238283625" }
   ];
   const emailAddress = "unimake06@gmail.com";
+  const socialLinks = [
+  {
+    Icon: FaInstagram,
+    url: "https://www.instagram.com/unimakevisionandtechnology?igsh=MWNudXhwbnl5MWtzdg%3D%3D&utm_source=qr",
+  },
+  {
+    Icon: FaFacebook,
+    url: "https://www.facebook.com/share/1APFqzUq7T/?mibextid=wwXIfr",
+  },
+  {
+    Icon: FaYoutube,
+    url: "https://youtube.com/@unimakeicecreamplantahmedabad?si=ujbVf4cLS1yZPAdj",
+  }
+];
+
+const indiamartLink = "https://www.indiamart.com/unimake-vision-and-technology/";
+
 
   return (
     <footer className="bg-gradient-to-br from-pink-200 via-yellow-50 to-blue-50 text-gray-700 mt-20 border-t-4 border-pink-300 shadow-lg">
@@ -44,16 +62,34 @@ const Footer = () => {
             </div>
 
             <div className="flex justify-center md:justify-start space-x-4 mt-4">
-              {[FaInstagram, FaFacebook, FaYoutube].map((Icon, index) => (
-                <a 
-                  key={index}
-                  href="#" 
-                  className="text-pink-600 hover:text-yellow-600 transition-colors duration-300"
-                >
-                  <Icon className="w-6 h-6" />
-                </a>
-              ))}
-            </div>
+  {socialLinks.map(({ Icon, url }, index) => (
+    <div key={index} className="flex items-center space-x-1">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-pink-600 hover:text-yellow-600 transition-colors duration-300"
+      >
+        <Icon className="w-6 h-6" />
+      </a>
+    </div>
+  ))}
+  <div className="flex items-center space-x-1">
+      <a
+        href={indiamartLink}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:scale-110 transition-transform duration-300"
+      >
+        <img 
+          src={indiamart} 
+          alt="IndiaMart" 
+          className="w-6 h-6 object-contain rounded-sm"
+        />
+      </a>
+    </div>
+</div>
+
           </div>
 
           {/* Address */}

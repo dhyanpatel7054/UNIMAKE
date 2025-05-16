@@ -10,11 +10,11 @@ mongoose.connect('mongodb+srv://unimake06:YBhKFEOkfC4oXv6t@cluster0.q9htute.mong
 
 // Middleware
 app.use(cors({
-  origin: 'http://localhost:5173', // Frontend port (Vite default)
-  credentials: true
-}));
+  origin:["http://deploy-mern-1whq.vercel.app"],
+  methods:['POST','GET'],
+  credentials:true
+}))
 app.use(express.json());
-
 // Routes
 const routes = require('./routes/routes');
 app.use('/api', routes);
