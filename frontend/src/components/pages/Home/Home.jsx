@@ -74,7 +74,7 @@ const Home = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await fetch('/api/products');
+        const response = await fetch('https://unimake-rajs-projects-ed5d8702.vercel.app/api/products');
         if (!response.ok) throw new Error('Failed to fetch products');
         const data = await response.json();
         // Map Cloudinary URLs to products
