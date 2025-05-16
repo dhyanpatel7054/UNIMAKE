@@ -80,7 +80,7 @@ const Home = () => {
         // Map Cloudinary URLs to products
         const productsWithCloudinary = data.map(product => ({
           ...product,
-          image: `https://res.cloudinary.com/your-account/image/upload/${product.imagePath}`
+          image: image: `https://res.cloudinary.com/unimake/image/upload/${product.imagePath}`
         }));
         setProducts(productsWithCloudinary);
       } catch (err) {
