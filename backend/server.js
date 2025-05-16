@@ -10,7 +10,7 @@ mongoose.connect('mongodb+srv://unimake06:YBhKFEOkfC4oXv6t@cluster0.q9htute.mong
 
 // Middleware
 app.use(cors({
-  origin: ["http://localhost:5173", "https://unimake-r83c.vercel.app/"],
+  origin: ["http://localhost:5173", "https://unimake-r83c.vercel.app"],
   methods: ['GET', 'POST'],
   credentials: true
 }));
