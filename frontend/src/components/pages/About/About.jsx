@@ -18,7 +18,7 @@ const About = () => {
           <div className="lg:w-[45%] xl:w-[500px] shrink-0 relative group">
             <div className="absolute inset-0 bg-pink-100 rounded-2xl transform rotate-2 scale-95 group-hover:rotate-1 transition-all duration-300"></div>
             <img 
-              src="src\assets\my_image.jpg" 
+              src="\my_image.jpg" 
               alt="Unimake Ice Cream Production" 
               className="w-full h-auto rounded-2xl shadow-2xl relative transform transition-all duration-300 hover:scale-98"
             />
