@@ -15,7 +15,7 @@ import indiamart from "../../../public/indiamart.jpg"
 const Footer = () => {
   const phoneNumbers = [
     { name: "RAJKUMAR PATEL", number: "+91 9408903793" },
-    { name: "HARPALSINH CHAUHAN", number: "+91 8238283625" }
+    { name: "HARPALSINH CHAUHAN", number: "+919979925228" }
   ];
   const emailAddress = "unimake06@gmail.com";
   const socialLinks = [
