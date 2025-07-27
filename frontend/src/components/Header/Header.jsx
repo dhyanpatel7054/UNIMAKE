@@ -19,7 +19,7 @@ const Header = ({ products }) => {
   }, []);
 
   // Contact information
-  const phoneNumbers = ["+919408903793", "+918238283625"];
+  const phoneNumbers = ["+919408903793", "+919979925228"];
   const emailAddress = "unimake06@gmail.com";
   const whatsappNumber = "919408903793";
 
