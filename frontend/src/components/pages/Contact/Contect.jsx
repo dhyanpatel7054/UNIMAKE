@@ -26,7 +26,7 @@ const ContactSection = () => {
 
   const phoneNumbers = [
     { name: "RAJKUMAR PATEL", number: "+91 9408903793" },
-    { name: "HARPALSINH CHAUHAN", number: "+91 8238283625" }
+    { name: "HARPALSINH CHAUHAN", number: "+91 9979925228" }
   ];
   const emails = ["unimake06@gmail.com", "Unimakeengineering@gmail.com"];
 
